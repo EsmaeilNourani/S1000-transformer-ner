@@ -7,8 +7,8 @@ batch_size="4"
 learning_rate="3e-5"
 epochs="1"
 
-train_file="$data_dir/train.tsv" 
-test_file="$data_dir/dev.tsv" 
+train_file="$data_dir/train_data_only_LSF.tsv"
+test_file="$data_dir/test_data_only_LSF.tsv" 
 
 echo "data dir: $data_dir" 
 echo "train file: $train_file"

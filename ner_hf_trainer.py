@@ -166,15 +166,16 @@ def main(argv):
         c = conlleval.evaluate(lines_ensemble)
         print("")
         conlleval.report(c)
-        results.append([conlleval.metrics(c)[0].prec, conlleval.metrics(c)[0].rec, conlleval.metrics(c)[0].fscore])
+        #results.append([conlleval.metrics(c)[0].prec, conlleval.metrics(c)[0].rec, conlleval.metrics(c)[0].fscore])
+        results.append([conlleval.metrics(c)[0].prec, conlleval.metrics(c)[0].rec, conlleval.metrics(c)[0].fscore,conlleval.metrics(c)[0].tp,conlleval.metrics(c)[0].fp,conlleval.metrics(c)[0].fn])
         m_names.extend(method_names)
 
 
     result_file = "results/results-{}.csv".format(args.output_file)
-    with open(result_file, 'w+') as f:
+    with open(result_file, 'a') as f:
         for i, line in enumerate(results):
-            params = "{},{},{},{},{},{},{},{},{},{}".format(args.output_file,
-                                            args.max_seq_length, 
+            params = "{},{},{},{},{},{},{},{},{},{}".format(args.experiment_ID,
+                                            args.max_seq_length,
                                             args.model_name, 
                                             args.num_train_epochs, 
                                             args.learning_rate,
