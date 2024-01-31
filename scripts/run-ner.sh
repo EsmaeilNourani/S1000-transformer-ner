@@ -2,10 +2,10 @@
 
 model="RoBERTa-large-PM-M3-Voc/RoBERTa-large-PM-M3-Voc-hf"
 data_dir="data"
-max_seq_length="128"
-batch_size="4"
-learning_rate="3e-5"
-epochs="1"
+max_seq_length="256"
+batch_size="16"
+learning_rate="1e-5"
+epochs="60"
 
 train_file="$data_dir/train_data_only_LSF.tsv"
 test_file="$data_dir/test_data_only_LSF.tsv" 
