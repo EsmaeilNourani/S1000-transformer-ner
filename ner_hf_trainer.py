@@ -174,8 +174,7 @@ def main(argv):
     result_file = "results/results-{}.csv".format(args.output_file)
     with open(result_file, 'a') as f:
         for i, line in enumerate(results):
-            params = "{},{},{},{},{},{},{},{},{},{}".format(args.experiment_ID,
-                                            args.max_seq_length,
+            params = "{},{},{},{},{},{},{},{},{}".format(args.max_seq_length,
                                             args.model_name, 
                                             args.num_train_epochs, 
                                             args.learning_rate,
