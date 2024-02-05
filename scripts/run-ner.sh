@@ -8,7 +8,7 @@ learning_rate="1e-5"
 epochs="60"
 
 train_file="$data_dir/train_data_only_LSF.tsv"
-test_file="$data_dir/test_data_only_LSF.tsv" 
+test_file="$data_dir/test_data_merged_only_LSF.tsv" 
 
 echo "data dir: $data_dir" 
 echo "train file: $train_file"
